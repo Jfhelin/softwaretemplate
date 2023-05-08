@@ -1,0 +1,25 @@
+name: Container Scanning
+
+on:
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build Docker image
+        run: docker build -t my-node-app .
+      - name: Scan Docker image
+        uses: anchore/scan-action@v3.3.4
+        id: scan
+        with:
+          image-ref: my-node-app
+          anchore-version: latest
+          anchore-policy: strict
+          fail-build: false
+      - name: Upload vulnerability report
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: ${{ steps.scan.outputs.sarif }}

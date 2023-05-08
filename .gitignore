@@ -1,0 +1,12 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Docker
+.DS_Store
+.dockerignore
+.docker/
+
+# Other
+.env

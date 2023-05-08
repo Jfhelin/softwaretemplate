@@ -1,0 +1,23 @@
+{
+  "name": "softwaretemplate",
+  "version": "1.0.0",
+  "description": "Welcome to our software template repository! This repository is designed to help you quickly get started with building and delivering a container with Node.js.",
+  "main": "app.js",
+  "scripts": {
+    "test": "Echo \"LGTM\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mortenp1337-test-org/softwaretemplate.git"
+  },
+  "author": "mortenp1337",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mortenp1337-test-org/softwaretemplate/issues"
+  },
+  "homepage": "https://github.com/mortenp1337-test-org/softwaretemplate#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}
